@@ -60,14 +60,14 @@ const DATA = [
         correctAnswer: `Congress`
     },
     {
-        question: `Under the Constitution, the longest a president can serve is:`,
+        question: `Who becomes the President of the United States if the President AND Vice President should die?`,
         answers: [
-            `8 years`,
-            `10 years`,
-            `6 years`,
-            `12 years`
+            `An election is held`,
+            `The Secretary of Defense`,
+            `Speaker of the House`,
+            `The Senate Majority leader`
         ],
-        correctAnswer: `10 years`
+        correctAnswer: `Speaker of the House`
     },
     {
         question: `What are the first words of the preamble to the Constitution?`,
