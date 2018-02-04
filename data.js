@@ -50,7 +50,7 @@ const DATA = [
         correctAnswer: `The Federalist Papers`
     },
     {
-        question: `Laws for the United States are made by:`,
+        question: `Federal laws for the United States are made by:`,
         answers: [
             `Congress`,
             `The Senate`,
@@ -93,11 +93,31 @@ const DATA = [
         question: `Why was the Ninth Amendment added to the Constitution?`,
         answers: [
             `To give congress the power to print money`,
-            `Because the framers wanted to make clear that basic rights were guaranteed event if they were not stated specifically`,
+            `To confirm other rights exist even if they are not explicitly stated`,
             `To give women the right to vote`,
             `Because the English Bill of Rights had to have 10 parts`
         ],
-        correctAnswer: `Because the framers wanted to make clear that basic rights were guaranteed even if they were not stated specifically`
+        correctAnswer: `To confirm other rights exist even if they are not explicitly stated`
+    },
+    {
+        question: `Invoking the fifth amendment means an accused man/woman:`,
+        answers: [
+            `Refuses to be tried again`,
+            `Refuses to testify against him/her self`,
+            `Demands a grand jury`,
+            `Wants to appeal his case`
+        ],
+        correctAnswer: `Refuses to testify against him/her self`
+    },
+    {
+        question: `According to the Constitution, the vice president serves as president of:`,
+        answers: [
+            `The Senate`,
+            `The Congress`,
+            `The Cabinet`,
+            `The House`
+        ],
+        correctAnswer: `The Senate`
     },
 ]; 
 
