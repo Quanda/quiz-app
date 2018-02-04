@@ -97,7 +97,7 @@ const DATA = [
             `To give women the right to vote`,
             `Because the English Bill of Rights had to have 10 parts`
         ],
-        correctAnswer: `Because the framers wanted to make clear that basic rights were guaranteed event if they were not stated specifically`
+        correctAnswer: `Because the framers wanted to make clear that basic rights were guaranteed even if they were not stated specifically`
     },
 ]; 
 
