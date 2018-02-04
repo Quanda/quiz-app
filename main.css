@@ -123,5 +123,19 @@ input[type=radio] {
 .wrong h2{
     color:red;
 }
+.A h2, .B h2 {
+   color: green; 
+}
+.F h2 {
+    color: red;
+}
 
+/* FOOTER */
+footer {
+    background-image: url('http://images.mentalfloss.com/sites/default/files/styles/mf_image_3x2/public/50913-iStock-638589782.jpg?itok=HTYdWBM0&resize=1100x740');
+    width: 100%;
+    height: 400px;
+    background-size: 100% 100%;
+    margin-top: 50px;
+}
 /* MEDIA QUERIES */
