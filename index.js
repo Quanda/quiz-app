@@ -1,7 +1,6 @@
 'use strict';
 
 /* TODO
-    make radio input required
     
 */ 
 
@@ -10,19 +9,17 @@ let questionCount = 0;
 // keeps track of user score
 let score = 0;
 
-
 // triggers when 'Take Quiz' button is clicked.
 // Removes the intro class and adds the quiz class with the first question form
 function handleStartQuiz() {
     $('.takeQuiz').on('click', function() {
         // remove intro
         $('.intro').remove();
-        
+
         // proceed to the first question
-        $('.quiz').prepend(populateForm);
+        $('.quiz').html(populateForm);
     })
 }
-
 // Returns the question form, dependent on which question the user is on
 function populateForm() {
     return `
@@ -32,8 +29,8 @@ function populateForm() {
             <li>Question: ${questionCount + 1} / ${DATA.length} </li>
         </ul>
     </div>
-    <h2 class="question">${DATA[questionCount].question}</h2>
     <form>
+        <legend class="question">${DATA[questionCount].question}</legend>
         <fieldset>
             <label class="answerOption">
             <input type="radio" value="${DATA[questionCount].answers[0]}" name="answer">
@@ -125,7 +122,7 @@ function incrementScore() {
 function nextQuestion() {
     $('.quiz').on('click', '.nextQuestion', function() {
         // populate the .quiz class with next question form
-        renderFeedback(populateForm(questionCount));
+        renderFeedback(populateForm());
     })
 }
 // returns final page view
@@ -136,7 +133,7 @@ function returnResults() {
     // perfect score
     if (score === questionCount) {
         resultsTitle = `Perfect!`;
-        resultsDescription = `You must have a pet bald eagle`;
+        resultsDescription = `You must have a pet bald eagle...`;
     }
     // score is greater than 75% but not perfect
     if(score > (questionCount * .75) && (score < questionCount) ) {
@@ -157,12 +154,22 @@ function returnResults() {
                 <h2>${resultsTitle}</h2>
                 <p>You scored ${score} / ${questionCount}</p>
                 <p>${resultsDescription}</p>
+                <button type="button" class="restart-quiz">Restart Quiz</button>          
             </div>`
+}
+// reset score and questionCount and render the question form
+function restartQuiz() {
+    $('.quiz').on('click', '.restart-quiz', function() {
+        score = 0;
+        questionCount = 0;
+        renderFeedback(populateForm());
+    });
 }
 
 // run event listener functions
 function createQuiz () {
     handleStartQuiz();
     userSubmitAnswer();
+    restartQuiz();
 }
 $(createQuiz);
