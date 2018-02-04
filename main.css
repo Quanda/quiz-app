@@ -57,11 +57,6 @@ button:hover {
 	cursor: pointer;
 }
 
-.question {
-    margin-top:45px;
-    text-align: center;
-}
-
 /* FORM */
 form {
     width: 60%;
@@ -71,6 +66,17 @@ form {
     display: flex;
 	flex-direction: column;
 	justify-content: space-between;
+}
+.question {
+    margin-top:45px;
+    text-align: center;
+    display: block;
+    font-size: 1.5em;
+    -webkit-margin-before: 0.83em;
+    -webkit-margin-after: 0.83em;
+    -webkit-margin-start: 0px;
+    -webkit-margin-end: 0px;
+    font-weight: bold;
 }
 fieldset {
     border: none;
