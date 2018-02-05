@@ -17,11 +17,11 @@ function handleStartQuiz() {
         $('.intro').remove();
 
         // proceed to the first question
-        $('.quiz').html(returnForm);
+        $('.quiz').html(returnQuestion());
     })
 }
 // Returns the question form, dependent on which question the user is on
-function returnForm() {
+function returnQuestion() {
     return `
     <div class="scoreboard">
         <ul>
@@ -65,24 +65,19 @@ function userSubmitAnswer() {
             alert('Please select an answer');
         }
         else {
-           let userChoice = $('input[name=answer]:checked');
+            let userChoice = $('input[name=answer]:checked');
             let answer = userChoice.val();
             let correctAnswer = `${DATA[questionCount].correctAnswer}`
 
             // if the user chose the correct answer
             if (answer === correctAnswer) {
                 userAnswerCorrect();
-            }
-            else {
+            } else {
                 userAnswerWrong(correctAnswer);
             }
-            questionCount++;
-            if(questionCount !== DATA.length) {
-                nextQuestion();
-            }
-            else {
-                renderFeedback(returnResults());
-            } 
+
+            incrementQuestion();
+            nextQuestion();
         }
     })
 }
@@ -90,7 +85,7 @@ function userSubmitAnswer() {
 function returnCorrectFeedback() {
     return `<div class="feedback correct">
                 <h2>Correct!</h2>
-                <button type="button" class="nextQuestion">Next Question</button>          
+                <button type="button" class="nextQuestion">Next</button>          
             </div>`
 }
 // returns wrong answer view
@@ -98,7 +93,7 @@ function returnWrongFeedback(correctAnswer) {
     return `<div class="feedback wrong">
                 <h2>Wrong</h2>
                 <h5>The correct answer is: ${correctAnswer}</h5>
-                <button type="button" class="nextQuestion">Next Question</button>          
+                <button type="button" class="nextQuestion">Next</button>          
             </div>`
 }
 // render the .quiz view
@@ -118,12 +113,18 @@ function userAnswerWrong(correctAnswer) {
 function incrementScore() {
     score++;
 }
+function incrementQuestion() {
+    questionCount++;
+}
 // uses event delegation to attach click event to .nextQuestion
 // onclick, populate the 
 function nextQuestion() {
     $('.quiz').on('click', '.nextQuestion', function() {
-        // populate the .quiz class with next question form
-        renderFeedback(returnForm());
+        if(questionCount === DATA.length) {
+            renderFeedback(returnResults());
+        } else {
+            renderFeedback(returnQuestion());
+        }
     })
 }
 // returns final page view
@@ -170,7 +171,7 @@ function restartQuiz() {
     $('.quiz').on('click', '.restart-quiz', function() {
         score = 0;
         questionCount = 0;
-        renderFeedback(returnForm());
+        renderFeedback(returnQuestion());
     });
 }
 
