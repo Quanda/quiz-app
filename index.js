@@ -134,25 +134,25 @@ function returnResults() {
     
     // perfect score
     if (score === questionCount) {
-        grade = `A`
+        grade = `A`;
         resultsTitle = `Perfect!`;
         resultsDescription = `You must have a pet bald eagle...`;
     }
     // score is greater than 75% but not perfect
-    if(score > (questionCount * .75) && (score < questionCount) ) {
-        grade = `B`
+    else if(score > (questionCount * .75) && (score < questionCount) ) {
+        grade = `B`;
         resultsTitle = `Good job, Patriot!`;
         resultsDescription = `I salute you`;
     }
     // score is greater than 50% but less than 75%
     else if(score > (questionCount * .50) && (score < questionCount * .75) ) {
-        grade = `C`
+        grade = `C`;
         resultsTitle = `Meh, not terrible`;
         resultsDescription = `Might want to brush up though`;
     }
     // score is less than 50%
     else {
-        grade = `F`
+        grade = `F`;
         resultsTitle = `Do you even America?`;
         resultsDescription = `Benjamin Franklin is rolling over in his grave`;
     }
