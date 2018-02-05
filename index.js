@@ -135,7 +135,7 @@ function returnResults() {
     // perfect score
     if (score === questionCount) {
         grade = `A`;
-        resultsTitle = `Perfect!`;
+        resultsTitle = `Wowzers!`;
         resultsDescription = `You must have a pet bald eagle...`;
     }
     // score is greater than 75% but not perfect
@@ -147,7 +147,7 @@ function returnResults() {
     // score is greater than 50% but less than 75%
     else if(score > (questionCount * .50) && (score < questionCount * .75) ) {
         grade = `C`;
-        resultsTitle = `Meh, not terrible`;
+        resultsTitle = `Hey, not terrible`;
         resultsDescription = `Might want to brush up though`;
     }
     // score is less than 50%
