@@ -135,13 +135,13 @@ function returnResults() {
     // perfect score
     if (score === questionCount) {
         grade = `A`;
-        resultsTitle = `Wowzers!`;
+        resultsTitle = `Perfect!`;
         resultsDescription = `You must have a pet bald eagle...`;
     }
     // score is greater than 75% but not perfect
     else if(score > (questionCount * .75) && (score < questionCount) ) {
         grade = `B`;
-        resultsTitle = `Good job, Patriot!`;
+        resultsTitle = `A true Patriot!`;
         resultsDescription = `I salute you`;
     }
     // score is greater than 50% but less than 75%
