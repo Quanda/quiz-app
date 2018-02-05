@@ -51,6 +51,7 @@ button {
     border-radius: 3px;
     letter-spacing: 1px;
     text-transform: uppercase;
+    min-width:150px;
 }
 button:hover {
 	background-color: #050435;
