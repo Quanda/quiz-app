@@ -108,6 +108,9 @@ input[type=radio] {
     vertical-align: middle;
     width:1.1em;
 }
+#submitAnswer {
+    margin-bottom: 20px;
+}
 
 /* FEEDBACK */
 .feedback{
@@ -117,16 +120,10 @@ input[type=radio] {
 .feedback h2 {
     text-transform: uppercase;
 }
-.correct h2{
-    color:green;
-}
-.wrong h2{
-    color:red;
-}
-.A h2, .B h2 {
+.A h2, .B h2, .correct h2 {
    color: green; 
 }
-.F h2 {
+.F h2, .wrong h2 {
     color: red;
 }
 
@@ -138,4 +135,5 @@ footer {
     background-size: 100% 100%;
     margin-top: 50px;
 }
+
 /* MEDIA QUERIES */
