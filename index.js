@@ -32,20 +32,20 @@ function returnQuestion() {
     <form>
         <legend class="question">${DATA[questionCount].question}</legend>
         <fieldset>
-            <label class="answerOption">
-            <input type="radio" value="${DATA[questionCount].answers[0]}" name="answer">
+            <label class="answerOption" for="answer0">
+            <input type="radio" id="answer0" value="${DATA[questionCount].answers[0]}" name="answer">
                 <span>${DATA[questionCount].answers[0]}</span>
             </label>
-            <label class="answerOption">
-            <input type="radio" value="${DATA[questionCount].answers[1]}" name="answer">
+            <label class="answerOption" for="answer1">
+            <input type="radio" id="answer1" value="${DATA[questionCount].answers[1]}" name="answer">
                 <span>${DATA[questionCount].answers[1]}</span>
             </label>
-            <label class="answerOption">
-            <input type="radio" value="${DATA[questionCount].answers[2]}" name="answer">
+            <label class="answerOption" for="answer2">
+            <input type="radio" id="answer2" value="${DATA[questionCount].answers[2]}" name="answer">
                 <span>${DATA[questionCount].answers[2]}</span>
             </label>
-            <label class="answerOption">
-            <input type="radio" value="${DATA[questionCount].answers[3]}" name="answer">
+            <label class="answerOption" for="answer3">
+            <input type="radio" id="answer3" value="${DATA[questionCount].answers[3]}" name="answer">
                 <span>${DATA[questionCount].answers[3]}</span>
             </label>
             <button type="submit" id="submitAnswer">Submit</button>
