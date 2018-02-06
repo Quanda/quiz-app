@@ -72,7 +72,7 @@ form {
     margin-top:45px;
     text-align: center;
     display: block;
-    font-size: 1.5em;
+    font-size: 28px;
     -webkit-margin-before: 0.83em;
     -webkit-margin-after: 0.83em;
     -webkit-margin-start: 0px;
@@ -90,6 +90,7 @@ label {
     padding:15px;
     text-transform: uppercase;
     cursor: pointer;
+    font-size:18px;
 }
 .quiz button {
     display:block;
@@ -113,14 +114,22 @@ input[type=radio] {
 }
 
 /* FEEDBACK */
-.feedback{
+.feedback {
     text-align: center;
     font-size: 24px;
 }
 .feedback h2 {
     text-transform: uppercase;
 }
-.A h2, .B h2, .correct h2 {
+.wrong span {
+    text-transform: uppercase;
+    color:#071163;
+}
+.wrong h5 {
+    margin-top:15px;
+    font-size:22px;
+}
+.A h2, .B h2, .C h2, .correct h2 {
    color: green; 
 }
 .F h2, .wrong h2 {

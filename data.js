@@ -105,7 +105,7 @@ const DATA = [
             `Refuses to be tried again`,
             `Refuses to testify against him/her self`,
             `Demands a grand jury`,
-            `Wants to appeal his case`
+            `Wants to appeal his/her case`
         ],
         correctAnswer: `Refuses to testify against him/her self`
     },

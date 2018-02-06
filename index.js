@@ -93,7 +93,7 @@ function returnCorrectFeedback() {
 function returnWrongFeedback(correctAnswer) {
     return `<div class="feedback wrong">
                 <h2>Wrong</h2>
-                <h5>The correct answer is: ${correctAnswer}</h5>
+                <h5>Correct answer: <span>${correctAnswer}</span></h5>
                 <button type="button" class="nextQuestion">Next</button>          
             </div>`
 }
@@ -149,8 +149,8 @@ function returnResults() {
     // score is greater than 50% but less than 75%
     else if(score > (questionCount * .50) && (score < questionCount * .75) ) {
         grade = `C`;
-        resultsTitle = `Hey, not terrible`;
-        resultsDescription = `Might want to brush up though`;
+        resultsTitle = `Good job!`;
+        resultsDescription = `But I think you can do better`;
     }
     // score is less than 50%
     else {
