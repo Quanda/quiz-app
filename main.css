@@ -123,7 +123,7 @@ input[type=radio] {
 }
 .wrong span {
     text-transform: uppercase;
-    color:#071163;
+    color:green;
 }
 .wrong h5 {
     margin-top:15px;
