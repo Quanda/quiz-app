@@ -48,6 +48,7 @@ function returnQuestion() {
             <input type="radio" id="answer3" value="${DATA[questionCount].answers[3]}" name="answer">
                 <span>${DATA[questionCount].answers[3]}</span>
             </label>
+            <p class="warning"></p>
             <button type="submit" id="submitAnswer">Submit</button>
         </fieldset>
     </form>`
@@ -62,7 +63,7 @@ function userSubmitAnswer() {
     $('.quiz').on('click', '#submitAnswer', function(event) {
         event.preventDefault();
         if($('input[name=answer]:checked').length <= 0) {
-            alert('Please select an answer');
+            $('.warning').addClass('warning').text('Please select an answer');
         }
         else {
             let userChoice = $('input[name=answer]:checked');
