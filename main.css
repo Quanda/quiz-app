@@ -101,7 +101,6 @@ input {
     width: 16px;
     height: 16px;
     border: 2px solid #ffffff;
-    outline: none;
     margin-right: 5px;
 }
 input[type=radio] {
@@ -138,3 +137,11 @@ footer {
 }
 
 /* MEDIA QUERIES */
+@media screen and (max-width: 768px) {
+    label {
+        width:100%;
+    }
+    form {
+        width:85%;
+    }
+}
