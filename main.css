@@ -126,6 +126,14 @@ input[type=radio] {
 .F h2, .wrong h2 {
     color: red;
 }
+.warning {
+    margin-top: 10px;
+    margin-bottom: 10px;
+    text-align: center;
+    color: red;
+    font-weight: bold;
+    font-size: 22px;
+}
 
 /* FOOTER */
 footer {
