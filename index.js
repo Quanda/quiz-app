@@ -141,7 +141,7 @@ function returnResults() {
         resultsDescription = `You must have a pet bald eagle...`;
     }
     // score is greater than 75% but not perfect
-    else if(score > (questionCount * .75) && (score < questionCount) ) {
+    else if(score >= (questionCount * .75) && (score < questionCount) ) {
         grade = `B`;
         resultsTitle = `A true Patriot!`;
         resultsDescription = `I salute you`;
