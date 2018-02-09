@@ -59,6 +59,9 @@ button:hover {
 }
 
 /* FORM */
+legend {
+    text-transform: uppercase;
+}
 form {
     width: 60%;
     margin-top:20px;
@@ -88,7 +91,6 @@ label {
     margin-left: auto;
     margin-right: auto;
     padding:15px;
-    text-transform: uppercase;
     cursor: pointer;
     font-size:18px;
 }
