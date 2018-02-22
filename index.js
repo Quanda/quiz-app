@@ -32,7 +32,7 @@ function returnQuestion() {
     <form>
         <fieldset>
         <legend class="question">${DATA[questionCount].question}</legend>
-        <div role="radiogroup" aria-labelledby="answerChoices">
+        <div role="radiogroup">
             <label class="answerOption" for="answer0">
             <input type="radio" id="answer0" value="${DATA[questionCount].answers[0]}" name="answer">
                 <span>${DATA[questionCount].answers[0]}</span>
@@ -50,9 +50,9 @@ function returnQuestion() {
                 <span>${DATA[questionCount].answers[3]}</span>
             </label>
         </div>
-            <p class="warning"></p>
-            <button type="submit" id="submitAnswer">Submit</button>
         </fieldset>
+        <p class="warning"></p>
+        <button type="submit" id="submitAnswer">Submit</button>
     </form>`
     
 }
