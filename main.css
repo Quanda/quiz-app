@@ -3,8 +3,12 @@
     padding: 0;
     box-sizing: border-box;
     font-family: 'Slabo 27px', serif;
+    color: #071163;
 }
 
+body {
+    background-color: #ffee7147; /* 71cbff47 ffee7147*/
+}
 /* LOGO */
 .logo {
     margin:auto;
@@ -125,7 +129,7 @@ input[type=radio] {
 }
 .wrong span {
     text-transform: uppercase;
-    color:green;
+    color:#071163;
 }
 .wrong h5 {
     margin-top:15px;
